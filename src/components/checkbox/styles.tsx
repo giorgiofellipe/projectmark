@@ -1,16 +1,21 @@
 import styled, { css } from 'styled-components';
+import { breakpoint } from '../../utils/breakpoints';
 
 export const CheckboxContent = styled.div<{ selected?: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
-  width: 210px;
+  width: auto;
   flex-shrink: 0;
   padding: 16px 14px;
   margin: 1px;
   border-radius: 10.5px;
   border: 1px solid var(--gray-300);
   cursor: pointer;
+
+  @media ${breakpoint.laptopL} {
+    width: 210px;
+  }
 
   ${({ selected }) => selected && css`
     margin: 0px;

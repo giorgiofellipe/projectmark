@@ -70,7 +70,6 @@ export const StageBarProgress = styled.div`
 `;
 
 export const StageBody = styled.div`
-  width: 100%;
   min-height: 175px;
   border-radius: 10.5px;
 `;

@@ -1,4 +1,5 @@
 import { css, styled } from "styled-components";
+import { breakpoint } from "../../utils/breakpoints";
 
 
 export const TitleContainer = styled.div`
@@ -24,6 +25,7 @@ export const Label = styled.span`
   font-style: normal;
   font-weight: 700;
   margin-top: 3px;
+  text-align: center;
   cursor: pointer;
 `;
 
@@ -32,7 +34,15 @@ export const Container = styled.a<{ selected: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-right: 40px;
+  padding-right: 20px;
+
+  &:last-of-type {
+    padding: 0;
+  }
+
+  @media ${breakpoint.laptop} {
+    padding-right: 40px;
+  }
 
   ${TitleContainer} {
     ${({ selected }) => selected && css`
